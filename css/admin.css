@@ -1,0 +1,106 @@
+ss /* 
+Author:Amreen wafa;
+theme: Food order website admin;
+version: 1.0; 
+*/
+
+
+
+/* this css is for all or we can say default adding css */
+*{
+ margin: 0;
+ padding: 0;
+ font-family: "Caveat", cursive;
+ font-family: "Foldit", sans-serif;
+ font-family: "Roboto", sans-serif;
+}
+
+
+
+.wrapper{
+    padding: 1%;
+    width: 80%;
+    margin: 0% auto;
+}
+
+
+.text-center{
+    text-align: center;
+}
+
+/* css for fixing of overflow in div but currently not working*/
+.clearfix {
+    clear: both;
+    display: none;
+  }
+  
+  /* css for fixing of overflow in div */
+.overflow {
+    overflow: auto;
+  }
+
+  h1 {
+    font-size: 1.3rem;
+    color: rgb(12, 43, 43);
+  }
+  
+  
+/*css for menu*/
+.menu{
+     background-color: rgb(35, 35, 54); 
+    /* line-height: 80px;
+    margin-right: 200px; */
+}
+
+.menu ul{
+    /* to remove dots after using ul */
+     list-style-type: none;  
+}
+
+.menu ul li{
+    /* to make them inline horizontally */
+    display: inline;
+    padding: 1%;
+} 
+
+.menu ul li a{
+    /* to remove underline decorection which is before  */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white;
+
+}
+
+.menu ul li a:hover {
+    color: rgb(245, 242, 45);
+    font-size: 18px;
+  }
+  
+
+  /* css for main content */
+  .main{
+    background-color: blueviolet;
+    /* css for fixing of overflow in div */
+    overflow: auto;
+    padding: 3% 0%;
+    font-size: 1.5rem;
+  }
+
+.col-4{
+    width: 18%;
+    background-color: white;
+    margin: 1%;
+    padding: 2%;
+    float: left;
+    /* css for fixing of overflow in div */
+    overflow: auto;
+}
+
+
+/* css for footer */
+.footer{
+    font-size: 1.5rem;
+    background-color: white;
+    color: black;
+}
