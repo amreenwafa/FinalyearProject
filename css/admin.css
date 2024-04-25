@@ -44,8 +44,18 @@ version: 1.0;
     color: rgb(12, 43, 43);
   }
   
+   /**css for manage admin tables * */
+   .tbl_full{
+    width: 100%;
+   }
+
+   table tr th{
+    border-bottom: 1px solid black;
+    padding: 1%;
+   }
+
   
-/*css for menu*/
+ /****************************** css for menu content Starts ********************************** */
 .menu{
      background-color: rgb(35, 35, 54); 
     /* line-height: 80px;
@@ -77,8 +87,10 @@ version: 1.0;
     font-size: 18px;
   }
   
+ /****************************** css for menu content End ********************************** */
 
-  /* css for main content */
+
+ /****************************** css for main content for Index Starts  ********************************** */
   .main{
     background-color: blueviolet;
     /* css for fixing of overflow in div */
@@ -97,10 +109,16 @@ version: 1.0;
     overflow: auto;
 }
 
+   /****************************** css for main content End ********************************** */
 
-/* css for footer */
+
+
+/****************************** css for footer starts here ********************************** */
+
 .footer{
     font-size: 1.5rem;
     background-color: white;
     color: black;
 }
+
+/****************************** css for footer ends here ********************************** */
