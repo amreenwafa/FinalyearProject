@@ -78,3 +78,9 @@
 
     <!-- using php repeating part // dry pattern // not repeating  same code-->
     <?php include('partials/footer.php');?>
+
+
+
+
+
+ 

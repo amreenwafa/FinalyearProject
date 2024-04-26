@@ -18,13 +18,13 @@
 
                                          <tr>
                                                  <td>Username</td>
-                                                 <td><input type="text" full_name="username" placeholder="Your username"></td>
+                                                 <td><input type="text" name="username" placeholder="Your username"></td>
                                          </tr>
 
 
                                          <tr>
                                                  <td>Password</td>
-                                                 <td><input type="password" full_name="password" placeholder="Your password"></td>
+                                                 <td><input type="password" name="password" placeholder="Your password"></td>
                                          </tr>
 
 
@@ -46,3 +46,27 @@
 
    <!-- using php repeating part // dry pattern // not repeating  same code-->
    <?php include('partials/footer.php');?>
+
+
+
+   <?php
+      //  process the value from form and save it to database
+
+     //check wheather thesubmit button is cleacked or not   
+     
+     if(isset($_POST['submit']))   /* isset function is use to check certain property is set or not   .... in this condition we are checking weather the value from submit is passed through POST method or not*/
+        {
+            //    Button clicked 
+            // echo"Button Clicked";
+
+
+            // Get data from form
+              $full_name = $_POST['full_name'];    /* by adding eho we can make clear thatdata is adding or not   */
+
+              $username = $_POST['username'];
+
+              echo $password = $_POST['password'];
+
+        }
+
+    ?>
