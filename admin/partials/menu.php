@@ -1,3 +1,5 @@
+<?php include('../config/constant.php');?>
+
 <html>
 <head>
     <title>Food order website - Home page</title>
