@@ -1,11 +1,23 @@
    <!-- using php repeating part // dry pattern // not repeating  same code-->
-   <?php include('partials/menu.php');?>
+   <?php include('partials/menu.php')?>
 
    <div class="main-content">
         <div class="wrapper">
               <h1>Add Admin</h1>
                <br>
-               
+
+
+               <!-- when we fail to add admin this will work -->
+               <?php
+                if(isset($_SESSION['add'])) //checking weather the session is set or not
+                   {
+                    echo $_SESSION['add'];  //Displaying Session Message
+                    unset($_SESSION['add']);  //Removing session Message
+                   }
+                 ?>       
+                 
+                 
+
                       <!-- we use POST METHOD to submit our value through FORM and the value of POST is passed hidden without displaying in browser-->
                       <form action="" method="POST">
         
@@ -77,17 +89,37 @@
 
            // echo $sql;    /* to see sql query*/
 
-      // //  3. Execute Query and save data in database
-      // //  mysqli_connect try to connect our credential localhost is our host root is our bydefault user name and password is blank
-      //  $conn= mysqli_connect('localhost', 'root', '') or die(mysqli_error());
+      //  3. Execute Query and save data in database this part is written on constant file
 
-      // //  $db_select = mysqli_select_db($conn,'DBNAME') or die(mysqli_error());  //selecting database
-      //  $db_select = mysqli_select_db($conn, 'food-order') or die(mysqli_error());
 
-      //  $res = mysqli_query($con and $sql) or die(mysqli_error());   //mysqli is improved version of my sql                                        //if $res means reserved it is used to hold true or false value if the query is executed successfully then the value will be true and if it is false it is failed to execute
+      // executing query and saving data into database
+      $res = mysqli_query($conn, $sql) or die(mysqli_error());   //mysqli is improved version of my sql  //if $res means reserved it is used to hold true or false value if the query is executed successfully then the value will be true and if it is false it is failed to execute
       
+      // 4. check weather the (query is executed) data is inserted or not and display appropriate message
+      if($res==TRUE)
+        {
+            // data inserted
+            // echo"Data Inserted";
 
+            // create a session to insert data
+            $_SESSION['add']= "Admin Added successfully";
 
+            //Redirect page to manage-admin    //to concatinate in php we use . and location is our string value we are concatenating our constant SITEURL and SITEURL gives the value of home url(http://localhost/MyRestraun/) but we want to redirect trhis page to our manage-admin .php
+            header("location:".SITEURL.'admin/manage-admin.php');
         }
+      else{
+              
+            // failed to insert data
+            // echo"Failed to Insert Data";
+
+                        // create a session to insert data
+                        $_SESSION['add']= "Failed To Add Admin";
+
+                        header("location:".SITEURL.'admin/add-admin.php');
+          }
+
+
+
+      }
 
     ?>

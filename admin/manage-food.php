@@ -1,7 +1,7 @@
 
    <!-- using php repeating part // dry pattern // not repeating  same code-->
    
-   <?php include('partials/menu.php');?>
+   <?php include('partials/menu.php')?>
 
                   <div class="main">
                     <div class="wrapper">
