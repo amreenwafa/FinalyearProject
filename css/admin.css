@@ -138,6 +138,13 @@ version: 1.0;
     /* background-color: #370b83; */
     width: 30%;
   }
+
+  
+  .errorlogin{
+    color: red;
+    width: 100%;
+    text-decoration-color: red;
+  }
   
 
   
@@ -209,3 +216,12 @@ version: 1.0;
 }
 
 /****************************** css for footer ends here ********************************** */
+
+
+/* Css for login */
+.login{
+  border: 1px solid grey;
+  width: 20%;
+  margin: 10% auto;
+  padding: 2%;
+}
