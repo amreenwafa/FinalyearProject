@@ -63,7 +63,27 @@ version: 1.0;
    .tbl-30{
     width: 30%;
    }
+   
 
+   /* Submit button coloring */
+.btns {
+  background-color: #D862BC;
+  border: none;
+  color: white;
+  padding: 8px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+.btns:hover {
+  background-color: #E59BE9;
+}
 
    /* css for button */
    .btn-primary{
@@ -107,6 +127,18 @@ version: 1.0;
     background-color: #FF9B50;
    }
 
+
+   .success {
+    color: green;
+    width: 30%;
+  }
+  
+  .failure {
+    color: red;
+    /* background-color: #370b83; */
+    width: 30%;
+  }
+  
 
   
  /****************************** css for menu content Starts ********************************** */
