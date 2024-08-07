@@ -244,13 +244,23 @@ h2 {
 }
 
 /* Hover css on categories boxes */
-.box-3:hover .image {
+/*.box-3:hover .image {
   opacity: 0.3;
   /* Below css is for zoom transtion while hover on the image */
-  -webkit-transform: scale(1.1, 1.1);
+ /* -webkit-transform: scale(1.1, 1.1);
   transform: scale(1.1, 1.1);
-  -webkit-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;    //warning  comming
+}*/
+
+.box-3:hover .image {
+  opacity: 0.3;
+  /* Below css is for zoom transition while hover on the image */
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  -webkit-transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
+
 
 .box-3:hover .middle {
   opacity: 1;
@@ -276,21 +286,44 @@ h2 {
   border-radius: 15px;
 }
 
-.food-menu-img {
+/*.food-menu-img {
   width: 25%;
   float: left;
   /* Belo css is for zoom transition animation */
+ /* -webkit-transition: all 0.3s ease-in-out;  //warning comming
+  background-size: cover;
+  overflow: hidden;
+}*/
+
+.food-menu-img {
+  width: 25%;
+  float: left;
+  /* Below css is for zoom transition animation */
   -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   background-size: cover;
   overflow: hidden;
 }
 
+
+
+
 /* This css is for zooming the image while hovering over the image of food menu */
+/*.food-menu-img:hover img {
+  -webkit-transform: scale(1.2, 1.2);
+  transform: scale(1.2, 1.2);
+  -webkit-transition: all 0.3s ease-in-out; //warning comming
+}*/
+
+/* This CSS is for zooming the image while hovering over the image of the food menu */
 .food-menu-img:hover img {
   -webkit-transform: scale(1.2, 1.2);
   transform: scale(1.2, 1.2);
   -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
+
+
 
 .food-menu-desc {
   width: 60%;
